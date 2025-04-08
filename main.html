@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertor Valutar</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: rgb(255, 255, 255);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Convertor Valutar</h1>
+    <input type="number" id="amount" placeholder="Introdu suma" />
+    <select id="from">
+      <option value="EUR">EUR</option>
+      <option value="USD">USD</option>
+      <option value="MDL">MDL</option>
+    </select>
+    <select id="to">
+      <option value="EUR">EUR</option>
+      <option value="USD">USD</option>
+      <option value="MDL">MDL</option>
+    </select>
+    <button onclick="convert()">Convertește</button>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    const rates = {
+      EUR: 1,
+      USD: 1.1,
+      MDL: 19.5
+    };
+
+    function convert() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const from = document.getElementById('from').value;
+      const to = document.getElementById('to').value;
+
+      if (isNaN(amount)) {
+        document.getElementById('result').textContent = 'Introduceti o suma valida!';
+        return;
+      }
+      const result = (amount / rates[from]) * rates[to];
+      document.getElementById('result').textContent = 
+        `${amount} ${from} = ${result.toFixed(2)} ${to}`;
+    }
+  </script>
+
+</body>
+</html>
