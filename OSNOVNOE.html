@@ -62,11 +62,13 @@
             <option value="EUR">EUR</option>
             <option value="USD">USD</option>
             <option value="MDL">MDL</option>
+            <option value="RUB">RUB</option>
         </select>
         <select id="to">
             <option value="EUR">EUR</option>
             <option value="USD">USD</option>
             <option value="MDL">MDL</option>
+            <option value="RUB">RUB</option>
         </select>
         <button onclick="convert()">Convertește</button>
         <div id="result" class="result"></div>
@@ -76,7 +78,8 @@
         const rates = {
             EUR: 1,
             USD: 1.1,
-            MDL: 19.5
+            MDL: 19.5,
+            RUB: 
         };
 
         function convert() {
