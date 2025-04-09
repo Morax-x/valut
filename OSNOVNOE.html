@@ -1,57 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertor Valutar</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: url('https://images.pexels.com/photos/545064/pexels-photo-545064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-            background-size: cover;
-            background-position: center;
-            color: #000000;
-        }
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 45px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            width: 350px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 29px;
-            margin-bottom: 35px;
-        }
-        input, select, button {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 25px;
-            border-radius: 80px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-        }
-        button {
-            background-color: #4acf50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .result {
-            font-size: 18px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -59,43 +13,23 @@
         <h1>Convertor valutar</h1>
         <input type="number" id="amount" placeholder="Introdu suma"/>
         <select id="from">
-            <option value="EUR">EUR</option>
-            <option value="USD">USD</option>
-            <option value="MDL">MDL</option>
-            <option value="RUB">RUB</option>
+            <option value="EUR">€ EUR</option>
+            <option value="USD">$ USD</option>
+            <option value="MDL">L MDL</option>
+            <option value="RUB">₽ RUB</option>
         </select>
         <select id="to">
-            <option value="EUR">EUR</option>
-            <option value="USD">USD</option>
-            <option value="MDL">MDL</option>
-            <option value="RUB">RUB</option>
+            <option value="EUR">€ EUR</option>
+            <option value="USD">$ USD</option>
+            <option value="MDL">L MDL</option>
+            <option value="RUB">₽ RUB</option> 
         </select>
+        <div id="icon" class="currency-icon">💰</div>
         <button onclick="convert()">Convertește</button>
         <div id="result" class="result"></div>
+        <div class="disclaimer">!Nota: Datele pot fi inexacte.</div>
     </div>
 
-    <script>
-        const rates = {
-            EUR: 1,
-            USD: 1.1,
-            MDL: 19.5,
-            RUB: 
-        };
-
-        function convert() {
-            const amount = parseFloat(document.getElementById('amount').value);
-            const from = document.getElementById('from').value;
-            const to = document.getElementById('to').value;
-
-            if (isNaN(amount)) {
-                document.getElementById('result').textContent = 'Introduceți o sumă validă!';
-                return;
-            }
-
-            const result = (amount / rates[from]) * rates[to];
-            document.getElementById('result').textContent =
-                `${amount} ${from} = ${result.toFixed(2)} ${to}`;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

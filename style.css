@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/545064/pexels-photo-545064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 29px;
+    margin-bottom: 35px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 80px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4acf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 80px;
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+button:hover {
+    background-color: #1f3d20;
+    transform: scale(1.1);
+}
+
+.result {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.currency-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.currency-icon.animate {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-60px); }
+    60% { transform: translateY(9px); }
+    100% { transform: translateY(0); }
+}
+
+.disclaimer {
+    font-size: 16px;
+    color: #000000;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -74,6 +74,19 @@
             margin-top: 20px;
             font-family: 'Courier New', Courier, monospace;
         }
+        button:hover {
+      background-color: #1f3d20;
+      transform: scale(1.1);
+        }
+        button {
+      background-color: #4acf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 80px;
+      transition: transform 0.5s, background-color 0.5s;
+    }
 
     </style>
 </head>
@@ -97,7 +110,7 @@
         <div id="icon" class="currency-icon">💰</div>
         <button onclick="convert()">Convertește</button>
         <div id="result" class="result"></div>
-        <div class="disclaimer">Notă: Datele pot fi inexacte.</div>
+        <div class="disclaimer">!Nota: Datele pot fi inexacte.</div>
     </div>
 
     <script>
@@ -119,7 +132,6 @@
                 return;
             }
 
-            // Анимация валюты
             icon.classList.add('animate');
             setTimeout(() => icon.classList.remove('animate'), 500);
 
