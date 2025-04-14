@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Înregistrare</title>
+  <link rel="stylesheet" href="registerm.css" />
+</head>
+<body>
+  <div class="form-container">
+    <form id="registerForm">
+      <div class="step" id="step1">
+        <h2>Etapa 1</h2>
+        <input type="text" id="username" placeholder="Nume utilizator" required autocomplete="off" />
+        <input type="email" id="email" placeholder="Email" required autocomplete="off" />
+        <input type="tel" id="phone" placeholder="Telefon (+373...)" required autocomplete="off" />
+        <button type="button" onclick="nextStep(1)">Continuă</button>
+      </div>
+      
+      <div class="step hidden" id="step2">
+        <h2>Etapa 2</h2>
+        <input type="password" id="password" placeholder="Parolă (minim 5 caractere, cu cifre, litere mari și simboluri)" required autocomplete="off" />
+        <button type="button" onclick="nextStep(2)">Continuă</button>
+      </div>
+
+      <div class="step hidden" id="step3">
+        <h2>Gata!</h2>
+        <p>Înregistrare reușită!</p>
+        <button type="submit">Intră pe site</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="registerm.js"></script>
+  
+</body>
+</html>

@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: rgb(255, 255, 255);
+      background-image: url(https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg);
       padding-top: 75px;
     }
     .top-vertical-bar {
@@ -92,11 +92,12 @@
     table {
       border-collapse: collapse;
       margin: 0 auto;
-      width: 30%;
+      width: 35%;
     }
 
     table, th, td {
-      border: 1px solid #aaa;
+      border: 1px solid #ff0000;
+      color: #ff0000;
     }
 
     th, td {
@@ -110,7 +111,7 @@
     }
 
     .center-img img {
-      max-width: 300px;
+      max-width: 400px;
       border-radius: 8px;
     }
 
@@ -127,12 +128,12 @@
     }
 
     .top-left {
-      top: 100px;
+      top: 70px;
       left: 300px;
     }
 
     .top-right {
-      top: 100px;
+      top: 70px;
       right: 10px;
     }
 
@@ -202,27 +203,39 @@
       border-radius: 6px; 
       display: flex;
       align-items: center;
+      transition: background-color 0.3s, transform 0.3s;
     }
-
-    .ready-dashboard {
-      font-size: 16px;
-      font-weight: bold;
-      color: #3498db;
-      margin-bottom: 15px;
-    }
-
-    .material-icons {
-      margin-left: 10px;
-      font-size: 18px;
-      width: 20px;
-    }
-
+    
     .upgrade-pro img {
       width: 20px;
       height: 20px;
       margin-left: 10px;
+      transition: transform 0.3s;
     }
-    
+
+    .upgrade-pro:hover {
+      background-color: #2980b9; 
+      transform: scale(1.05); 
+    }
+
+    .upgrade-pro:hover img {
+      transform: scale(1.2);
+    }
+
+    .ready-dashboard {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 15px;
+    }
+    .btn-3{
+     position: absolute;
+     top: -445px;
+     left: 750px;
+     transform: scale(0.06); 
+     z-index: 10;
+    }
+
   </style>
 </head>
 <body>
@@ -237,7 +250,7 @@
         <img src="https://www.svgrepo.com/show/494020/statistics.svg" alt="">
     </p>
     <p class="upgrade-pro">Components
-        <img src=https://www.svgrepo.com/show/434486/adjustment-horizon.svg alt="">
+        <img src="https://www.svgrepo.com/show/434486/adjustment-horizon.svg" alt="">
     </p>
     <p class="upgrade-pro">Forms
         <img src="https://www.svgrepo.com/show/372448/form.svg" alt="">
@@ -255,7 +268,7 @@
         <img src="https://www.svgrepo.com/show/352181/icons.svg" alt="">
     </p>
     <p class="upgrade-pro">Upgrade to PRO
-      <img src="https://www.svgrepo.com/show/459844/up-alt.svg" alt="arrow" />
+      <img src="https://www.svgrepo.com/show/459844/up-alt.svg" alt="" />
     </p>
   </div>
 
@@ -264,15 +277,14 @@
   <div class="main-content">
     <form class="search-container">
       <input type="text" id="search-bar" placeholder="Search...">
-      <a href="#" class="search-icon-link"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png" alt="Search">
-      </a>
-    
+      <a href="#" class="search-icon-link"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png" alt="Search"></a>
     </form>
-    <div class="btn-3">
-      <img src="https://www.svgrepo.com/show/506734/notifications-alert.svg" alt="">
-    </div>
+
     <div class="center-img">
       <img src="C:\Users\Ivan\Downloads\Telegram Desktop\photo_2025-04-09_11-39-48.jpg" alt="zon" />
+    </div>
+    <div class="btn-3">
+      <img src="https://www.svgrepo.com/show/506734/notifications-alert.svg" alt="">
     </div>
 
     <table>
@@ -290,7 +302,10 @@
       </tr>
     </table>
   </div>
+  <div>
+    
 
+  </div>
   <p class="top-left">Mustafa Ivan</p> 
   <p class="top-right">Mustafa Ivan</p>
   <p class="bottom-left">Mustafa Ivan</p>

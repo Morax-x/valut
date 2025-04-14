@@ -1,15 +1,20 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 45;
+    margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
     height: 100vh;
     background-image: url('https://images.pexels.com/photos/545064/pexels-photo-545064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     background-size: cover;
     background-position: center;
     color: #000000;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 5px;
 }
 
 .container {
@@ -40,14 +45,12 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    padding: 15px;
-    border-radius: 80px;
     transition: transform 0.5s, background-color 0.5s;
 }
 
 button:hover {
     background-color: #1f3d20;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .result {
@@ -77,4 +80,48 @@ button:hover {
     color: #000000;
     margin-top: 20px;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.side-panel {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    margin-left: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.side-panel h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.bank-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.bank-button {
+    flex: 1 1 auto;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background-color:  #4acf50;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.bank-button:hover {
+    background-color: #1f3d20;
+}
+
+.current-rates div {
+    padding: 5px 0;
+    font-size: 16px;
+    border-bottom: 1px dashed #ccc;
 }
