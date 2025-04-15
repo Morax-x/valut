@@ -39,5 +39,5 @@ function nextStep(currentStep) {
 
 document.getElementById("registerForm").addEventListener("submit", function(e) {
   e.preventDefault();
-  window.location.href = "../contiut/OSNOVNOE.html";
+  window.location.href = "../continut/OSNOVNOE.html";
 });

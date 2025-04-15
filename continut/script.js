@@ -61,7 +61,7 @@ function convert() {
     }
 
     const rates = exchangeRates[selectedBank];
-    const result = (amount / rates[from]) * rates[to];
+    const result = amount * (rates[from] / rates[to]);
 
     icon.classList.add('animate');
     setTimeout(() => icon.classList.remove('animate'), 500);
