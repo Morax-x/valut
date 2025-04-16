@@ -19,7 +19,7 @@ body {
 
 .container {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 45px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 350px;
@@ -65,7 +65,7 @@ button:focus {
 }
 
 .currency-icon {
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 15px;
     transition: transform 0.5s ease;
 }
@@ -77,8 +77,8 @@ button:focus {
 
 @keyframes bounce {
     0% { transform: translateY(0); }
-    30% { transform: translateY(-60px); }
-    60% { transform: translateY(9px); }
+    30% { transform: translateY(-40px); }
+    60% { transform: translateY(5px); }
     100% { transform: translateY(0); }
 }
 
@@ -91,11 +91,11 @@ button:focus {
 
 .side-panel {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 65px;
+    padding: 45px;
     margin-left: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 0 auto;
 }
 
 .side-panel h2 {
@@ -135,11 +135,17 @@ button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-
+.current-rates h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
 .current-rates div {
-    padding: 5px 0;
+    padding: 8px 0;
     font-size: 16px;
+    color: #333;
     border-bottom: 1px dashed #ccc;
+    transition: background-color 0.3s ease;
 }
 .date-shortcuts{
     display: flex;
@@ -150,26 +156,26 @@ button:focus {
 }
 .date-shortcuts button{
     flex: 1 ;
-    padding: 6px 10px;
-    font-size: 12px;
+    padding: 10px 15px;
+    font-size: 14px;
     border-radius: 20px;
     color: white;
-    background-color: #4acf50;
+    background-color: #28a745;
     border: none;
     cursor: pointer;
     transition: transform 0,5s,background-color 0.5s;
     white-space: nowrap;
 }
 .date-shortcuts button:hover{
-    background-color: #1f3d20;
+    background-color: #218838;
 }
 
 .date-shortcuts button:active{
-    transform: scale(0.80);
+    transform: scale(0.95);
 }
 .date-shortcuts button:focus{
     outline: none;
-    box-shadow: 0 0 5px rgba(7, 58, 1, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .date-shortcuts button:disabled{
     background-color: #ccc;
