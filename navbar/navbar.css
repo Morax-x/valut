@@ -1,0 +1,110 @@
+/* Основной стиль для навигационной панели */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height:75px;
+  margin-right: 15px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.avatar:hover {
+  border-color: #2a9d8f; 
+}
+
+#logout-btn {
+  background-color: #e63946;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+#logout-btn:hover {
+  background-color: #a0001e;
+  transition: background-color 0.3s ease;
+}
+
+#logout-btn:active {
+  background-color: #d72c3d; 
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/545064/pexels-photo-545064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+  padding-top: 80px; 
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 5px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}

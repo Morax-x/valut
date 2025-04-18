@@ -1,0 +1,28 @@
+#footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: white;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: -100px; 
+    left: 0;
+    transition: bottom 0.4s ease;
+  }
+  #footer.visible {
+    bottom: 0;
+  }
+    #footer a {
+        color: #00f;
+        text-decoration: none;
+    }
+    #footer a:hover {
+        text-decoration: underline;
+    }
+    #footer a:visited {
+        color: #551A8B;
+    }
+    #footer a:active {
+        color: #f00;
+    }

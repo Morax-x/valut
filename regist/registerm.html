@@ -19,7 +19,25 @@
       
       <div class="step hidden" id="step2">
         <h2>Etapa 2</h2>
+      
         <input type="password" id="password" placeholder="Parolă (minim 5 caractere, cu cifre, litere mari și simboluri)" required autocomplete="off" />
+      
+        
+          <input type="password" id="confirmPassword" placeholder="Confirmă parola" required autocomplete="off" />
+
+<div id="captchaContainer">
+  <p id="captchaQuestion"></p>
+  <input type="text" id="captchaAnswer" placeholder="Răspuns captcha" required />
+</div>
+<div class="avatar-container">
+          <label>Alege un avatar:</label>
+          <div class="avatars">
+            <img src="https://i.pinimg.com/236x/91/77/5a/91775a5907919dbe52cad6e7519383a6.jpg" class="avatar" onclick="selectAvatar(this)">
+            <img src="https://pikuco.ru/upload/test_stable/e70/e70752116c2f7796c8c67c5b1eef1c85.webp" class="avatar" onclick="selectAvatar(this)">
+            <img src="https://pikuco.ru/upload/test_stable/092/0925ee77d099f723dc76225955195a09.webp" class="avatar" onclick="selectAvatar(this)">
+          </div>
+        </div>
+      
         <button type="button" onclick="nextStep(2)">Continuă</button>
       </div>
 

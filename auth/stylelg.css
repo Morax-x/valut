@@ -46,7 +46,8 @@ button {
     width: 100%;
     padding: 10px;
     background-color:purple;
-    color: linear-gradient(to right, purple, pink);
+    background: linear-gradient(to right, purple, pink);
+    color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;

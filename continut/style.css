@@ -7,6 +7,9 @@ body {
     background-size: cover;
     background-position: center;
     color: #000000;
+    min-height: 900px;
+    display: flex;
+    justify-content: center;
 }
 
 .main-wrapper {
@@ -15,11 +18,13 @@ body {
     align-items: flex-start;
     padding: 40px;
     gap: 5px;
+    width: 100%;
 }
 
 .container {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 45px;
+    padding: 40px;
+    margin-left: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 350px;
@@ -50,28 +55,35 @@ button {
 
 button:hover {
     background-color: #1f3d20;
-    transform: scale(1.05);
+    transform: scale(0.90);
 }
-
+button:active {
+    transform: scale(0.80);
+}
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
 .result {
     font-size: 18px;
     font-weight: bold;
 }
 
 .currency-icon {
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 15px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .currency-icon.animate {
     animation: bounce 0.5s ease;
 }
 
+
 @keyframes bounce {
     0% { transform: translateY(0); }
-    30% { transform: translateY(-60px); }
-    60% { transform: translateY(9px); }
+    30% { transform: translateY(-40px); }
+    60% { transform: translateY(5px); }
     100% { transform: translateY(0); }
 }
 
@@ -84,29 +96,30 @@ button:hover {
 
 .side-panel {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 25px;
+    padding: 45px;
     margin-left: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 0 auto;
 }
 
 .side-panel h2 {
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 25px;
     text-align: center;
 }
 
 .bank-buttons {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     gap: 10px;
     margin-bottom: 20px;
-    justify-content: center;
+    
 }
 
 .bank-button {
-    flex: 1 1 auto;
+    flex: 1 auto;
     padding: 10px;
     border-radius: 30px;
     border: none;
@@ -114,14 +127,72 @@ button:hover {
     color: white;
     cursor: pointer;
     font-size: 14px;
+    white-space: nowrap;
 }
 
 .bank-button:hover {
     background-color: #1f3d20;
 }
-
-.current-rates div {
-    padding: 5px 0;
-    font-size: 16px;
-    border-bottom: 1px dashed #ccc;
+.bank-button:active {
+    transform: scale(0.80);
+    transition: transform 0.5s, background-color 0.5s;
+    background-color: #1f3d20;
 }
+.bank-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.current-rates h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.current-rates div {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px dashed #ccc;
+    transition: background-color 0.3s ease;
+}
+.date-shortcuts{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.date-shortcuts button{
+    flex: 1 ;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    cursor: pointer;
+    transition: transform 0,5s,background-color 0.5s;
+    white-space: nowrap;
+}
+.date-shortcuts button:hover{
+    background-color: #218838;
+}
+
+.date-shortcuts button:active{
+    transform: scale(0.95);
+}
+.date-shortcuts button:focus{
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.date-shortcuts button:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.date-shortcuts button:disabled:hover{
+    background-color: #ccc;
+}
+.date-shortcuts button:disabled:active{
+    transform: none;
+}
+
+    

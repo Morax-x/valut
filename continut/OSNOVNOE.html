@@ -5,44 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertor Valutar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">  
 </head>
 <body>
-    <div class="main-wrapper">
-        <div class="container">
-            <h1>Convertor valutar</h1>
-            <input type="text" id="amount" placeholder="Introdu suma" />
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="https://png.pngtree.com/png-clipart/20230413/original/pngtree-logo-with-beautiful-angel-anime-character-png-image_9052786.png" alt="" class="logo">
+      <span class="title">Convertor Valutar De La Morax</span>
+    </div>
+    <div class="navbar-right">
+      <img id="user-avatar" class="avatar" src="https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png" alt="Avatar">
+      <button id="logout-btn">Logout</button>
+    </div>
+  </div>
 
-            <select id="from">
-                <option value="EUR">€ EUR</option>
-                <option value="USD">$ USD</option>
-                <option value="MDL">L MDL</option>
-                <option value="RUB">₽ RUB</option>
-            </select>
-            <select id="to">
-                <option value="EUR">€ EUR</option>
-                <option value="USD">$ USD</option>
-                <option value="MDL">L MDL</option>
-                <option value="RUB">₽ RUB</option>
-            </select>
+  <div class="main-wrapper">
+    <div class="container">
+        <h1>Convertor valutar</h1>
+        <input type="text" id="amount" placeholder="Introdu suma" />
+        
+        <select id="from">
+            <option value="EUR">€ EUR</option>
+            <option value="USD">$ USD</option>
+            <option value="MDL">L MDL</option>
+            <option value="RUB">₽ RUB</option>
+        </select>
+        <select id="to">
+            <option value="EUR">€ EUR</option>
+            <option value="USD">$ USD</option>
+            <option value="MDL">L MDL</option>
+            <option value="RUB">₽ RUB</option>
+        </select>
 
-            <div id="icon" class="currency-icon">💰 💰 💰</div>
-            <button onclick="convert()">Convertește</button>
-            <div id="result" class="result"></div>
-            <div class="disclaimer"><p><u>!Nota: Datele pot fi inexacte.</u></p></div>
-        </div>
-
-        <div class="side-panel">
-            <h2>Cursuri bancare</h2>
-            <div class="bank-buttons">
-                <button onclick="selectBank('bnm')" class="bank-button">BNM</button>
-                <button onclick="selectBank('maib')" class="bank-button">MAIB</button>
-                <button onclick="selectBank('victoriabank')" class="bank-button">Victoriabank</button>
-                <button onclick="selectBank('ecb')" class="bank-button">EuroCreditBank</button>
-            </div>
-            <div id="currentRates" class="current-rates"></div>
-        </div>
+        <div id="icon" class="currency-icon">💰 💰 💰</div>
+        <button onclick="convert()">Convertește</button>
+        <div id="result" class="result"></div>
+        <div class="disclaimer"><p><u>!Nota: Datele pot fi inexacte.</u></p></div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="side-panel">
+        <h2>Cursuri bancare</h2>
+        <div class="bank-buttons">
+            <button onclick="selectBank('bnm')" class="bank-button">BNM</button>
+            <button onclick="selectBank('maib')" class="bank-button">MAIB</button>
+            <button onclick="selectBank('victoriabank')" class="bank-button">Victoriabank</button>
+            <button onclick="selectBank('ecb')" class="bank-button">EuroCreditBank</button>
+        </div>
+        <input type="date" id="datePicker" onchange="onDateChange"/>
+        <div class="date-shortcuts">
+            <button onclick="setRelativeDate(0)">Astăzi</button>
+            <button onclick="setRelativeDate(-1)">Ieri</button>
+            <button onclick="setRelativeDate(-7)">Săptămâna trecută</button>
+            <button onclick="setRelativeDate(-30)">Luna trecută</button>
+            <button onclick="setRelativeDate(-365)">Anul trecut</button>
+        </div>
+        <div id="currentRates" class="current-rates"></div>
+    </div>
+  </div>
+  <div id="footer"></div>
+  <script src="script.js"></script>  
+<script src="../footer/footer.js" defer></script>  
+<script src="../navbar/navbar.js" defer></script>  
+  
 </body>
 </html>
